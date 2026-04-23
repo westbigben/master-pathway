@@ -1,0 +1,109 @@
+{
+  "theme": "light_and_dark",
+  "archetype": "Organic & Earthy combined with Swiss & High-Contrast",
+  "core_aesthetic": "The Grandmaster's Study - Parchment & Ink, Vintage Tournament Hall, Architectural Modernism. A mature, disciplined, and inspiring environment.",
+  "colors": {
+    "light": {
+      "background": "#F7F5F0",
+      "surface": "#FFFFFF",
+      "primary": "#2D3A2D",
+      "primary_foreground": "#F7F5F0",
+      "secondary": "#EADDCA",
+      "secondary_foreground": "#1A1C1A",
+      "accent": "#B85C38",
+      "accent_foreground": "#FFFFFF",
+      "muted": "#E5E1D8",
+      "muted_foreground": "#5C5F58",
+      "border": "#D5D1C8",
+      "text": "#1A1C1A"
+    },
+    "dark": {
+      "background": "#0D1112",
+      "surface": "#161A1B",
+      "primary": "#EADDCA",
+      "primary_foreground": "#0D1112",
+      "secondary": "#1E2425",
+      "secondary_foreground": "#EADDCA",
+      "accent": "#D4AF37",
+      "accent_foreground": "#0D1112",
+      "muted": "#1E2425",
+      "muted_foreground": "#8E9490",
+      "border": "#2A3233",
+      "text": "#EADDCA"
+    },
+    "chess_board": {
+      "light_square": "#EADDCA",
+      "dark_square": "#4A5D4E",
+      "highlight": "rgba(212, 175, 55, 0.4)",
+      "last_move": "rgba(184, 92, 56, 0.4)"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Cormorant Garamond",
+      "body": "IBM Plex Sans",
+      "mono": "IBM Plex Mono"
+    },
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight",
+      "h3": "text-xl sm:text-2xl tracking-tight",
+      "h4": "text-lg sm:text-xl tracking-tight",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm uppercase tracking-[0.2em] font-mono"
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous spacing. Use p-8 or p-12 for containers. The 'Control Room' grid for dashboards, 'Bento' grid for stats.",
+    "container_padding": "p-8 md:p-12",
+    "grid_gap": "gap-6 md:gap-8",
+    "border_radius": "rounded-none md:rounded-sm",
+    "shadows": "shadow-none md:shadow-sm",
+    "layout_modes": {
+      "dashboard": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 or gap-6, dense information architecture",
+      "marketing": "grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-8 or gap-12, asymmetrical bento grids"
+    }
+  },
+  "components": {
+    "buttons": "Flat, angular, 1px border. Primary is solid brand color. Hover uses subtle opacity or slight lift. text-sm font-mono tracking-widest uppercase.",
+    "cards": "Cardless or flat cards with 1px border-border, no heavy shadows. In light mode: white background with subtle border. In dark mode: slightly lighter slate.",
+    "navigation": "Sticky top nav with glassmorphism (backdrop-blur-xl bg-background/80) or solid with bottom border. Z-index 50.",
+    "chess_board": "Hero component. Must scale responsively. No rounded corners on squares. A subtle drop shadow around the entire board. Must use raw HTML/Tailwind or specialized chess library, styled to match our palette.",
+    "progress_bars": "Sharp edges, 4px height. Primary color fill, muted background.",
+    "icons": "Use @phosphor-icons/react (Duotone weight for high-end look). Install via: yarn add @phosphor-icons/react",
+    "forms": "Shadcn components heavily customized to be flat, with 1px borders and rounded-sm max."
+  },
+  "motion": {
+    "philosophy": "Subtle, deliberate, smooth. No bouncy animations. Serious, adult-adjacent tone.",
+    "hover": "transition-colors duration-200 ease-in-out",
+    "page_load": "framer-motion staggered fade-in up (y: 20, opacity: 0)",
+    "piece_movement": "Smooth 150ms spring animation"
+  },
+  "imagery": {
+    "style": "Macro photography, textures, architectural minimalism.",
+    "urls": [
+      {
+        "category": "hero_background",
+        "url": "https://images.pexels.com/photos/32602518/pexels-photo-32602518.jpeg",
+        "description": "Close-up of a vintage wooden chess set on a board with dramatic lighting."
+      },
+      {
+        "category": "texture_background",
+        "url": "https://images.pexels.com/photos/30831663/pexels-photo-30831663.jpeg",
+        "description": "Close-up of a textured stone wall with dark slate rocks, ideal for backgrounds."
+      }
+    ]
+  },
+  "accessibility": {
+    "contrast": "Strict APCA/WCAG AA compliance. Use primary foreground colors appropriately.",
+    "focus": "focus:ring-2 focus:ring-accent focus:outline-none focus:ring-offset-2",
+    "testing": "All interactive elements MUST include data-testid attribute in kebab-case."
+  },
+  "instructions_to_main_agent": [
+    "Use Shadcn UI components but strip away the default Vercel look (rounded-md, soft shadows). Make them angular (rounded-none or rounded-sm).",
+    "The UI must feel like a mature, focused study environment.",
+    "Use CSS Grid heavily for the dashboard layout.",
+    "Ensure the chess board retains a perfect 1:1 aspect ratio.",
+    "Add 'data-testid' to all buttons, links, and forms."
+  ]
+}
